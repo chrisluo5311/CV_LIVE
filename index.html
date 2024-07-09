@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./stylesheets/all.css" />
+    <style>
+      .bg-cover {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .bg-attachment-fixed {
+        background-attachment: fixed;
+      }
+      .object-fit-cover {
+        object-fit: cover;
+      }
+      .deco-box {
+        height: 240px;
+        width: 240px;
+        background-color: var(--bs-secondary);
+      }
+    </style>
   </head>
   <body>
-    
+    <!-- 內容比較少的時候，至少有100%的高度，超過100%的高度也可以 -->
+    <header class="min-vh-100 position-relative">
+      <div class="deco-box position-absolute top-0 start-0"></div>
+      <div class="deco-box position-absolute bottom-0 end-0"></div>
+      <div
+        class="position-absolute bg-cover bg-attachment-fixed"
+        style="
+          top: 30px;
+          left: 30px;
+          right: 30px;
+          bottom: 30px;
+          background-image: url(https://images.unsplash.com/photo-1612282130134-49784d98ac61?q=80&w=3318&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        "
+      ></div>
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+        <h1 class="display-1 fw-bold">陳 六角</h1>
+        <hr class="mb-1 mx-n5">
+        <h2>Hex Chen</h2>
+        <p>貓咪鬥惡龍的精彩故事</p>
+      </div>
+    </header>
+    <div class="container py-5">
+      <div class="row gy-3 justify-content-center flex-md-row-reverse">
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1612282131240-6e878907d0f6?q=80&w=3442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          class="w-100 object-fit-cover" height="500" alt="">
+        </div>
+        <div class="col-md-5 d-flex align-items-center">
+          <div>
+            <h2 class="display-4">我的貓咪冒險故事：</h2>
+            <p>Do eu culpa aliquip amet eu. Labore quis elit dolor cillum dolor exercitation esse non aliqua aliquip minim dolore dolore laborum elit. Incididunt velit quis anim velit deserunt velit velit occaecat nisi. </p>
+            <p>Do eu culpa aliquip amet eu. Labore quis elit dolor cillum dolor exercitation esse non aliqua aliquip minim dolore dolore laborum elit. Incididunt velit quis anim velit deserunt velit velit occaecat nisi. Non consequat reprehenderit sit esse dolore ad anim nisi ea excepteur ipsum. Enim est pariatur minim. </p>
+            <a href="#" class="btn btn-outline-primary mt-4 w-100">
+              看更多冒險故事
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
   </body>
 </html>
